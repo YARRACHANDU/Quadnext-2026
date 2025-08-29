@@ -38,8 +38,6 @@ const PbDepartment = () => {
           lineHeight: "1.2",
           userSelect: "none",
           marginBottom: "20px",
-          whiteSpace: "nowrap",
-          overflow: "hidden",
         }}
       >
         About the Organizing Department
@@ -75,7 +73,6 @@ const PbDepartment = () => {
           whiteSpace: "pre-line",
           textAlign: "justify",
           borderRadius: "10px",
-        
         }}
       >
         <p>{language === "english" ? englishDescription : teluguDescription}</p>

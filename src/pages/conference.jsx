@@ -10,7 +10,7 @@ function Conference() {
     <div>
       <ScrollToTop />
       <Homenav />
-      <div style={{ margin: "120px" }}>
+      <div style={{ marginTop: "120px" }}>
         <TimeLine />
         <Important />
       </div>

@@ -9,11 +9,13 @@ function Accomidation() {
   return (
     <div>
       <Homenav />
-      <div style={{ margin: "120px" }}>
+      <div
+        style={{ marginleft: "20px", marginRight: "20px", marginTop: "120px" }}
+      >
         <HowToReach />
-        <Accomidations />
       </div>
       <div style={{ marginLeft: "50px", marginRight: "50px" }}>
+        <Accomidations />
         <BudgetHotels />
       </div>
       <Homefooter />

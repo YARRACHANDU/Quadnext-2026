@@ -9,7 +9,7 @@ function Award() {
     <>
       <ScrollToTop />
       <Homenav />
-      <div style={{ margin: "120px" }}>
+      <div style={{ marginTop: "120px" }}>
         <Awards />
       </div>
       <Footer />

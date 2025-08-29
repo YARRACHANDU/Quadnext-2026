@@ -12,13 +12,12 @@ function Authorguidelines() {
     <>
       <ScrollToTop />
       <Homenav />
-      <div style={{ margin: "80px" }}>
+      <div style={{ marginTop: "80px" }}>
         <CallForPapers />
       </div>
-     <div style={{margin:'0px'}}>
-       <ConferenceTopics />
-      
-     </div>
+      <div style={{ margin: "0px" }}>
+        <ConferenceTopics />
+      </div>
       <div style={{ margin: "50px" }}>
         <ImportantDates />
       </div>

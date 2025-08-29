@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronsRight } from "lucide-react";
 export default function ConferenceFeatures() {
   return (
-    <section className="text-muted py-5 " style={{ marginLeft: "60px" }}>
+    <section className="text-muted py-5 " style={{ margin: "60px" }}>
       <div className="container py-5">
         {/* Heading */}
         <div className="text-center m-4">

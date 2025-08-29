@@ -13,7 +13,7 @@ function Homepage() {
       <ScrollToTop />
       <Homenav />
       <HomepageComponents />
-      <div style={{ margin: "50px" }}>
+      <div style={{ marginTop: "50px", marginRight: "50px" }}>
         <Homeorg />
       </div>
       <Homepageobj />

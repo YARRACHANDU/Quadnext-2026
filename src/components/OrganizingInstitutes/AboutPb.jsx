@@ -10,7 +10,8 @@ const content = {
 };
 
 const AboutPb = () => {
-  const fullText = "PARVATHANENI BRAHMAYYA SIDDHARTHA COLLEGE OF ARTS & SCIENCE ";
+  const fullText =
+    "PARVATHANENI BRAHMAYYA SIDDHARTHA COLLEGE OF ARTS & SCIENCE ";
   const [displayedText, setDisplayedText] = useState("");
   const [lang, setLang] = useState("en"); // default English
   const [fade, setFade] = useState(true);
@@ -67,7 +68,7 @@ const AboutPb = () => {
       >
         <h1
           style={{
-            fontSize: "3.5rem",
+            fontSize: "2.5rem",
             fontWeight: "700",
             lineHeight: "1.2",
             maxWidth: "900px",
@@ -134,19 +135,21 @@ const AboutPb = () => {
           >
             {lang === "en" ? "తెలుగు" : "English"}
           </button>
-          
         </div>
-<h2
+        <h2
           style={{
             fontSize: "1rem",
             fontWeight: "200",
-            marginTop:'10px',
+            marginTop: "10px",
             textAlign: "center",
             color: "#141E46",
           }}
         >
           Official Website:
-      <a href="https://www.pbsiddhartha.ac.in/">https://www.pbsiddhartha.ac.in/</a>        </h2>
+          <a href="https://www.pbsiddhartha.ac.in/">
+            https://www.pbsiddhartha.ac.in/
+          </a>{" "}
+        </h2>
         {content[lang].map((paragraph, idx) => (
           <p key={idx} style={{ marginBottom: "20px" }}>
             {paragraph}

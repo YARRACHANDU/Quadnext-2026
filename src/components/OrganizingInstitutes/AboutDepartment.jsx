@@ -42,7 +42,7 @@ const hods = [
     profession: "Head of Department, CS-AIML &  Professor",
 
     image: "/faculty/csm.JPG",
-  }
+  },
 ];
 
 const teluguDescription = `ఎన్ఆర్ఐ ఇనిట ిట్యుట్ ఆఫ్ టెక్నాలజీలో కంప్యుట్ర్ సైన్ట అండ్ ఇంజనీరింగ్ విభాగం అధిక-నాణ్ుత్ స్థంకేతిక విద్ును అంద్ధంచడం మరియు కంప్యుటంగ్లే పరిశోధ్న మరియు ఆవిషకర్ణ్లనుప ్ర ోత్టహించాలనే ద్ృష్టుతో స్థాపంచబడింద్ధ. ఇద్ధ B.Tech తో సహా అనేక అండర్గా ాడ్యుయేట్ ప్రోగ్రామేను అంద్ధస్సూ ంద్ధ. కంప్యుట్ర్ సైన్ట అండ్ ఇంజనీరింగ్, CSE (ఆరిుఫిష్టయల్ ఇంటెలిజ్న్ట & మెష్టన్ ల ెరిాంగ్) CSE (డేటా సైన్ట) CSE (తెలుగు మీడియం) మరియు ఇనఫర్మమషన్ ట ెక్నాలజీ. ప ోస్టు గ్రాడ్యుయేట్ స్థాయిలో, విభాగం M.Tech అంద్ధస్సూ ంద్ధ. 
@@ -124,7 +124,7 @@ const AboutDepartment = () => {
         {/* Static Heading */}
         <h1
           style={{
-            fontSize: "3rem",
+            fontSize: "2rem",
             fontWeight: "700",
             lineHeight: "1.2",
             userSelect: "none",
@@ -196,8 +196,8 @@ const AboutDepartment = () => {
                          {" "}
                   <h2
                     style={{
-                      fontSize: "1.25rem",
-                      marginBottom: "6px",
+                      fontSize: "1rem",
+                      marginBottom: "3px",
                       color: "#2c3e50",
                     }}
                   >

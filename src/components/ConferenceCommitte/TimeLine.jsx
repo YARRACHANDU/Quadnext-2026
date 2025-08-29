@@ -302,6 +302,8 @@ const Icons = {
   ),
 };
 
+// (Use your provided dataEN, dataTE and Icons objects here unchanged)
+
 export default function ConferenceOrganizingCommittee() {
   const [inView, setInView] = useState(false);
   const [lang, setLang] = useState("EN");
@@ -326,7 +328,7 @@ export default function ConferenceOrganizingCommittee() {
   ).length;
   const totalMembers = Object.values(d).filter(Array.isArray).flat().length;
 
-  // Correspond items strictly to their headings/titles
+  // Key role cards data
   const keyRoles = [
     { title: d.cardTitles[0], list: d.chiefPatrons, Icon: Icons.ChiefPatrons },
     { title: d.cardTitles[1], list: d.patrons, Icon: Icons.Patrons },
@@ -345,9 +347,9 @@ export default function ConferenceOrganizingCommittee() {
         <h1 className="display-4">{d.pageTitle}</h1>
         <p className="lead">{d.pageSubtitle}</p>
         <button
-          style={{}}
           className="btn btn-warning position-absolute top-0 end-0 m-3"
           onClick={() => setLang(lang === "EN" ? "TE" : "EN")}
+          aria-label="Toggle language"
         >
           {lang === "EN" ? "తెలుగు" : "English"}
         </button>
@@ -360,7 +362,7 @@ export default function ConferenceOrganizingCommittee() {
             <div className="col-md-8">
               <div className="card shadow-lg border-0 text-center p-4">
                 <div className="row">
-                  <div className="col-md-6 mb-3">
+                  <div className="col-6 mb-3">
                     <h2>
                       {inView ? (
                         <CountUp end={totalCommittees} duration={2} />
@@ -370,7 +372,7 @@ export default function ConferenceOrganizingCommittee() {
                     </h2>
                     <p>{d.totalCommitteesLabel}</p>
                   </div>
-                  <div className="col-md-6 mb-3">
+                  <div className="col-6 mb-3">
                     <h2>
                       {inView ? <CountUp end={totalMembers} duration={2} /> : 0}
                     </h2>
@@ -382,7 +384,6 @@ export default function ConferenceOrganizingCommittee() {
           </div>
         </section>
 
-        {/* KEY ROLES */}
         {/* KEY ROLES */}
         <section className="container mb-5">
           <div className="row g-4 justify-content-center align-items-stretch">
@@ -413,7 +414,6 @@ export default function ConferenceOrganizingCommittee() {
         </section>
 
         {/* MAJOR COMMITTEES */}
-        {/* MAJOR COMMITTEES */}
         <section>
           <h3 className="mb-4">{d.majorCommitteesHeading}</h3>
           <div className="accordion" id="committeesAccordion">
@@ -433,6 +433,8 @@ export default function ConferenceOrganizingCommittee() {
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapse${idx}`}
+                    aria-expanded={idx === 0}
+                    aria-controls={`collapse${idx}`}
                   >
                     {d.accordions[key]}
                   </button>
@@ -442,23 +444,44 @@ export default function ConferenceOrganizingCommittee() {
                   className={`accordion-collapse collapse ${
                     idx === 0 ? "show" : ""
                   }`}
+                  aria-labelledby={`heading${idx}`}
+                  data-bs-parent="#committeesAccordion"
                 >
                   <div className="accordion-body">
                     <div className="row justify-content-center">
                       <div className="col-md-10">
                         <div className="row">
                           {d[key].map((m, i) => (
-                            <div key={i} className="col-md-6 text-start mb-2 d-flex align-items-start">
-  <span style={{display: "inline-flex", width: 18, height: 18, marginRight: 8, flex: "0 0 18px"}}>
-    <svg width="18" height="18" viewBox="0 0 40 40">
-      <polygon points="5,5 35,20 5,35 13,20" fill="#000" stroke="#000" strokeWidth="1"/>
-      <polygon points="5,5 35,20 13,20" fill="white" stroke="black" strokeWidth="1"/>
-    </svg>
-  </span>
-  <span>
-    {m}
-  </span>
-</div>
+                            <div
+                              key={i}
+                              className="col-12 col-md-6 text-start mb-2 d-flex align-items-start"
+                            >
+                              <span
+                                style={{
+                                  display: "inline-flex",
+                                  width: 18,
+                                  height: 18,
+                                  marginRight: 8,
+                                  flex: "0 0 18px",
+                                }}
+                              >
+                                <svg width="18" height="18" viewBox="0 0 40 40">
+                                  <polygon
+                                    points="5,5 35,20 5,35 13,20"
+                                    fill="#000"
+                                    stroke="#000"
+                                    strokeWidth="1"
+                                  />
+                                  <polygon
+                                    points="5,5 35,20 13,20"
+                                    fill="white"
+                                    stroke="black"
+                                    strokeWidth="1"
+                                  />
+                                </svg>
+                              </span>
+                              <span>{m}</span>
+                            </div>
                           ))}
                         </div>
                       </div>
