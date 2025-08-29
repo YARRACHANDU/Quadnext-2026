@@ -1,0 +1,22 @@
+.about-conference {
+  color: #141E46;
+}
+
+.conference-content {
+  gap: 2rem;
+}
+
+.conference-image-wrapper {
+  flex-shrink: 0;
+  max-width: 400px;
+}
+
+.conference-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.conference-text p {
+  margin-bottom: 1.25rem;
+}
