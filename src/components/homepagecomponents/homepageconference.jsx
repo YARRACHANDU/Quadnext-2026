@@ -87,8 +87,8 @@ export default function ConferenceFeatures() {
               Dr G Naga Bhaskar
             </h5>
             <p className="text-secondary">
-              Principal (Academics), NRI Institute of Technology (NRIIT),
-              Agiripalli, Vijayawada
+              Principal , NRI Institute of Technology (NRIIT), Agiripalli,
+              Vijayawada
             </p>
           </div>
 

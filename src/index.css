@@ -20,7 +20,7 @@ html, body {
 
 .footer-with-bg {
   position: relative;
-  background: url('./Nri.jpg') no-repeat center center;
+  background: url('/hom.jpg') no-repeat center center;
   background-size: cover;
   color: white;
 }
